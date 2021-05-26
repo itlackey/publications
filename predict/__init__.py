@@ -97,15 +97,15 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 feature_names=feat_used, link='logit')
 
     i = 0
-    html = True
-    if html:
-        fig = shap.force_plot(explainer.expected_value, shap_values[i, :], data_to_explain.iloc[i, :],
-            feature_names=feat_used, show=False, link='logit')
-        shap.save_html('shap_force_plot.htm', fig)
+    # html = True
+    # if html:
+    #     fig = shap.force_plot(explainer.expected_value, shap_values[i, :], data_to_explain.iloc[i, :],
+    #         feature_names=feat_used, show=False, link='logit')
+    #     shap.save_html('shap_force_plot.htm', fig)
         
-    else:
-        fig = shap.force_plot(explainer.expected_value, shap_values[i, :], data_to_explain.iloc[i, :],
-            feature_names=feat_used, show=False, matplotlib=True, link='logit')
+    # else:
+    #     fig = shap.force_plot(explainer.expected_value, shap_values[i, :], data_to_explain.iloc[i, :],
+    #         feature_names=feat_used, show=False, matplotlib=True, link='logit')
     
     
     output = {"img": "", "prob":str(y_prob[0])}
