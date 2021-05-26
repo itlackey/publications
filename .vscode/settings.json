@@ -1,3 +1,8 @@
 {
-    "python.pythonPath": "/bin/python3"
+    "python.pythonPath": "/bin/python3",
+    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~3"
 }
